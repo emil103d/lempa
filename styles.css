@@ -62,9 +62,9 @@ header {
 header img {
   grid-column: 1;
   display: block;
-  width: 60px;
+  width: 70px;
   height: auto;
-  margin-left: 2rem;
+  margin-left: 20px;
 }
 
 .menuknap {
@@ -149,7 +149,7 @@ header li a {
   font-size: 1.2rem;
   font-weight: bold;
   font-style: normal;
-  margin-right: 2rem;
+  margin-right: 30px;
   text-decoration: none;
 }
 
@@ -173,6 +173,6 @@ header li a {
   }
 
   header img {
-    width: 70px;
+    width: 80px;
   }
 }
