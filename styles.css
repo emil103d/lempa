@@ -1,4 +1,9 @@
 /* ------------Generelt----------------- */
+@font-face {
+  font-family: "helvetica-neue";
+  src: url(fonts/freesansbold-webfont.woff2) format(woff2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,23 +18,23 @@ img {
 /* ------------Skrift----------------- */
 
 h2 {
-  font-family: helvetica neue, sans-serif;
+  font-family: helvetica-neue, sans-serif;
   color: black;
   size: 23px;
   font-weight: bold;
 }
 
 h3 {
-  font-family: helvetica neue, sans-serif;
+  font-family: helvetica-neue, sans-serif;
   color: black;
   size: 20px;
   font-weight: bold;
 }
 
 h4 {
-  font-family: helvetica neue, sans-serif;
+  font-family: helvetica-neue, sans-serif;
   color: black;
-  size: 20px;
+  size: 21px;
   font-weight: bold;
 }
 
@@ -37,6 +42,7 @@ p {
   font-family: clone-rounded-latin, sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 20px;
 }
 
 /* ------------header----------------- */
