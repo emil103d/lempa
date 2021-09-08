@@ -62,7 +62,7 @@ header {
 header img {
   grid-column: 1;
   display: block;
-  width: 70px;
+  width: 90px;
   height: auto;
   margin-left: 20px;
 }
@@ -173,6 +173,6 @@ header li a {
   }
 
   header img {
-    width: 80px;
+    width: 120px;
   }
 }
