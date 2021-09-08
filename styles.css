@@ -1,0 +1,138 @@
+/* ------------Generelt----------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------Skrift----------------- */
+
+h2 {
+  font-family: helvetica neue, sans-serif;
+  color: black;
+  size: 23px;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: helvetica neue, sans-serif;
+  color: black;
+  size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: helvetica neue, sans-serif;
+  color: black;
+  size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-family: clone-rounded-latin, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------------header----------------- */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: right;
+  align-items: center;
+  min-height: 10vh;
+  position: relative;
+  z-index: 5;
+}
+
+header img {
+  grid-column: 1;
+}
+
+.menuknap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid gray; */
+  grid-column: 3;
+}
+
+.menuknap_burger {
+  width: 30px;
+  height: 2px;
+  background: #231709;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menuknap_burger::before,
+.menuknap_burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #231709;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menuknap_burger::before {
+  transform: translateY(-10px);
+}
+
+.menuknap_burger::after {
+  transform: translateY(10px);
+}
+
+/* -----header animation---- */
+
+.menuknap.open .menuknap_burger {
+  transform: translateX(50px);
+  background: transparent;
+}
+
+.menuknap.open .menuknap_burger::before {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+
+.menuknap.open .menuknap_burger::after {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100vw);
+}
+
+#menu {
+  list-style-type: none;
+  transition: transform 0.3s;
+  background-color: rgba(208, 186, 154, 0.6);
+  text-align: right;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+#menu li a {
+  font-family: basic-sans, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: #231709;
+  font-size: 10px;
+  margin-right: 1rem;
+}
