@@ -14,7 +14,7 @@ function start() {
 }
 
 function filtrerLamper() {
-  filter = this.dataset.kategori;
+  filter = this.dataset.Kategori;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   visLamper(); //kald funktionen visLamper efter det nye filter er sat
@@ -39,8 +39,8 @@ function visLamper() {
   let lampeTemplate = document.querySelector("template").content;
   container.textContent = "";
   lamper.forEach((lampe) => {
-    console.log("Kategori", lampe.kategori);
-    if (filter == lampe.kategori || filter == "alle") {
+    console.log("Kategori", lampe.Kategori);
+    if (filter == lampe.Kategori || filter == "alle") {
       const klon = lampeTemplate.cloneNode(true);
       klon.querySelector("img").src = "billeder/" + lampe.billednavn + ".svg";
       container.appendChild(klon);
