@@ -8,7 +8,33 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/yow4bha.css" />
     <link rel="shortcut icon" href="billeder/favicon.svg" type="image/x-icon" />
-    <style></style>
+    <style>
+      .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .product div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .product div img,
+      .product div h3,
+      .product div input {
+        grid-column: 2;
+      }
+
+      h3 {
+        place-self: center center;
+        margin-top: 20px;
+      }
+
+      input {
+        place-self: center center;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -28,13 +54,17 @@
       </ul>
     </header>
     <main>
-      <section class="first_section">
+      <section class="product">
         <article>
           <h2></h2>
           <h3></h3>
           <p></p>
         </article>
-        <img src="" alt="" />
+        <div>
+          <img src="" alt="" />
+          <h3>Vælg farve:</h3>
+          <input type="color" />
+        </div>
       </section>
     </main>
     <footer>
