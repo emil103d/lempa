@@ -217,6 +217,23 @@ article div {
   display: none;
 }
 
+h2 {
+  margin-bottom: 30px;
+}
+
+article {
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+.stander {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
 @media (min-width: 800px) {
   .menuknap {
     display: none;
@@ -276,7 +293,11 @@ button {
 
   .about {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  article {
+    margin: 30px;
   }
 
   .yellow {
