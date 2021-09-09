@@ -244,6 +244,7 @@ article div {
 button {
   background-color: white;
   padding: 10px 10px;
+  margin: 10px;
   text-align: center;
   font-family: helvetica-neue, sans-serif;
   color: black;
