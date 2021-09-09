@@ -241,6 +241,8 @@ article div {
   }
 }
 
+/***** Forside ******/
+
 button {
   background-color: white;
   padding: 10px 10px;
@@ -251,11 +253,17 @@ button {
   size: 21px;
   font-weight: bold;
   border-width: 1px;
+  border-color: black;
+  border-style: solid;
 }
 
 .navKategori {
   text-align: center;
   margin: 20px;
+}
+
+.valgt {
+  border-width: 2px;
 }
 
 /***** about media querys ******/
