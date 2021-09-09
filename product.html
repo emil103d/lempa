@@ -4,17 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>product - lempa</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/yow4bha.css" />
     <link rel="shortcut icon" href="billeder/favicon.svg" type="image/x-icon" />
     <style>
-      body {
-        background-color: aqua;
+      .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .product div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .product div img,
+      .product div h3,
+      .product div input {
+        grid-column: 2;
+      }
+
+      h3 {
+        place-self: center center;
+        margin-top: 20px;
+      }
+
+      input {
+        place-self: center center;
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
     <header>
-      <img src="billeder/logo.svg" alt="logo" />
+      <a href="forside.html"><img src="billeder/logo.svg" alt="logo" /></a>
       <nav>
         <ul class="ingen_menu">
           <li><a href="about.html">about</a></li>
@@ -29,6 +53,20 @@
         <li><a href="contact.html">contact</a></li>
       </ul>
     </header>
+    <main>
+      <section class="product">
+        <article>
+          <h2></h2>
+          <h3></h3>
+          <p></p>
+        </article>
+        <div>
+          <img src="" alt="" />
+          <h3>Vælg farve:</h3>
+          <input type="color" />
+        </div>
+      </section>
+    </main>
     <footer>
       <p>Amager Boulevard 2</p>
       <a href="mailto:doris@gmail.com"><p>doris@gmail.com</p></a>
