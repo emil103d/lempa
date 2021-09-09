@@ -241,6 +241,22 @@ article div {
   }
 }
 
+button {
+  background-color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-family: helvetica-neue, sans-serif;
+  color: black;
+  size: 21px;
+  font-weight: bold;
+  border-width: 1px;
+}
+
+.navKategori {
+  text-align: center;
+  margin: 20px;
+}
+
 /***** about media querys ******/
 
 @media (min-width: 867px) {
