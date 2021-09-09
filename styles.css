@@ -157,6 +157,24 @@ header li a {
   display: none;
 }
 
+/***** footer *****/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
 @media (min-width: 800px) {
   .menuknap {
     display: none;
@@ -174,5 +192,9 @@ header li a {
 
   header img {
     width: 120px;
+  }
+
+  footer p {
+    font-size: 1rem;
   }
 }
