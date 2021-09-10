@@ -297,6 +297,10 @@ figure {
   z-index: 1;
 }
 
+.lampePortefolio img {
+  cursor: pointer;
+}
+
 /***** about media querys ******/
 
 @media (min-width: 867px) {
