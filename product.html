@@ -48,6 +48,15 @@
         margin-top: 40px;
       }
 
+      .product div h3 {
+        margin-bottom: 0;
+      }
+
+      .farve {
+        display: flex;
+        justify-content: center;
+      }
+
       @media (min-width: 800px) {
         .product {
           display: grid;
@@ -67,6 +76,11 @@
 
         .product div img {
           height: 80%;
+        }
+
+        .farve {
+          grid-column: 2;
+          margin-bottom: 20px;
         }
       }
     </style>
@@ -93,7 +107,11 @@
         <div>
           <img src="" alt="" />
           <h3>Vælg farve:</h3>
-          <input type="color" />
+          <nav class="farve">
+            <button data-Farve="Sort" class="valgt" class="sort">Sort</button>
+            <button data-Farve="Gul" class="gul">Gul</button>
+            <button data-Farve="Grå" class="grå">Grå</button>
+          </nav>
         </div>
         <article>
           <h2></h2>

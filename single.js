@@ -8,9 +8,22 @@ const myHeaders = {
 };
 
 let lamper;
+let filter = "Gul";
 
 console.log("ID", id);
-document.addEventListener("DOMContentLoaded", loadJSON);
+document.addEventListener("DOMContentLoaded", start);
+
+function start() {
+  const filterKnapper = document.querySelectorAll(".farve button");
+  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerFarve));
+  loadJSON();
+}
+
+function filtrerFarve() {
+  filter = this.dataset.Farve;
+  document.querySelector(".valgt").classList.remove("valgt");
+  this.classList.add("valgt");
+}
 
 async function loadJSON() {
   const JSONData = await fetch(
@@ -41,7 +54,7 @@ function visLampen(lamper) {
   container.querySelector(".anden").innerHTML =
     "<strong>Materiale:</strong> " + lamper.Materiale;
   container
-    .querySelector("button")
+    .querySelector("article button")
     .addEventListener("click", tilbageTilForsiden);
 }
 //   document.querySelector("h3").textContent = menu.navn;
