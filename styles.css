@@ -56,8 +56,9 @@ header {
   align-items: center;
   height: 6rem;
   position: relative;
-  z-index: 5;
+  z-index: 20;
   border-bottom: 0.5px solid black;
+  background-color: white;
 }
 
 header img {
@@ -162,6 +163,7 @@ header li a {
 main {
   max-width: 1400px;
   margin: 0 auto;
+  z-index: 2;
 }
 
 /***** footer *****/
@@ -277,9 +279,10 @@ button {
 .navKategori {
   text-align: center;
   margin: 20px;
-  position: absolute;
-  top: 25vw;
-  left: 39vw;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: center;
+  z-index: 10;
 }
 
 .valgt {
@@ -293,10 +296,13 @@ figure {
 }
 
 #template_section {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 0.5fr;
   grid-auto-flow: dense;
+  z-index: 5;
 }
 
 #template_section figure:nth-child(3n) {
@@ -322,6 +328,43 @@ figure {
 
 .lampePortefolio img {
   cursor: pointer;
+}
+
+.zoomIn {
+  animation-name: zoom_kf;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+#forside {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+@keyframes zoom_kf {
+  0% {
+    transform: scale(50%);
+  }
+  100% {
+    transform: scale(130%);
+  }
+}
+
+.zoomOut {
+  margin-top: -100px;
+  animation-name: zoom_out_kf;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoom_out_kf {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(60%);
+  }
 }
 
 /***** about media querys ******/
