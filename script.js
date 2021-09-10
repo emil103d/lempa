@@ -6,7 +6,7 @@ let filter = "alle";
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
-  let filterKnapper = document.querySelectorAll("navKategori button");
+  let filterKnapper = document.querySelectorAll(".navKategori button");
   filterKnapper.forEach((knap) =>
     knap.addEventListener("click", filtrerLamper)
   );
@@ -14,7 +14,7 @@ function start() {
 }
 
 function filtrerLamper() {
-  filter = this.dataset.Kategori;
+  filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   visLamper(); //kald funktionen visLamper efter det nye filter er sat
@@ -42,15 +42,19 @@ function visLamper() {
     console.log("Kategori", lampe.Kategori);
     if (filter == lampe.Kategori || filter == "alle") {
       const klon = lampeTemplate.cloneNode(true);
-      klon.querySelector("img").src = "billeder/" + lampe.billednavn + ".svg";
-      container.appendChild(klon);
-      document
+      klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg";
+
+      klon
         .querySelector(".lampePortefolio")
-        .addEventListener("click", () => {
-          location.href = `product.html?id=${lampe._id}`;
-        });
+        .addEventListener("click", () => visLampe(lampe));
+      container.appendChild(klon);
     }
   });
+}
+
+function visLampe(lampe) {
+  location.href = `product.html?id=${lampe._id}`;
+  console.log(visLampe);
 }
 
 menuKnap.addEventListener("click", () => {

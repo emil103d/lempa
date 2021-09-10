@@ -43,7 +43,7 @@ p {
   font-family: clone-rounded-latin, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.4;
 }
 
@@ -217,6 +217,23 @@ article div {
   display: none;
 }
 
+h2 {
+  margin-bottom: 30px;
+}
+
+article {
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+.stander {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
 @media (min-width: 800px) {
   .menuknap {
     display: none;
@@ -260,10 +277,28 @@ button {
 .navKategori {
   text-align: center;
   margin: 20px;
+  position: absolute;
+  top: 25vw;
+  left: 39vw;
 }
 
 .valgt {
   border-width: 2px;
+}
+
+figure {
+  width: 40%;
+  height: 100%;
+}
+
+#template_section {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 0.5fr;
+  z-index: 1;
+}
+
+.lampePortefolio img {
+  cursor: pointer;
 }
 
 /***** about media querys ******/
@@ -277,6 +312,10 @@ button {
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  article {
+    margin: 30px;
   }
 
   .yellow {
