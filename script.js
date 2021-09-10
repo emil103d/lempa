@@ -42,8 +42,15 @@ function visLamper() {
     console.log("Kategori", lampe.Kategori);
     if (filter == lampe.Kategori || filter == "alle") {
       const klon = lampeTemplate.cloneNode(true);
-      klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg";
+      if (lampe.Kategori == "Gulvlampe") {
+        klon.querySelector("figure").classList.add("bund");
+      } else if (lampe.Kategori == "Pendel") {
+        klon.querySelector("figure").classList.add("top");
+      } else if (lampe.Kategori == "Væglampe") {
+        klon.querySelector("figure").classList.add("midte");
+      }
 
+      klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg";
       klon
         .querySelector(".lampePortefolio")
         .addEventListener("click", () => visLampe(lampe));
