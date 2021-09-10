@@ -1,4 +1,6 @@
 const menuKnap = document.querySelector(".menuknap");
+const kontakten = document.querySelector("#stik");
+const startskaerm = document.querySelector("#start");
 let menuOpen = false;
 let lamper;
 let filter = "alle";
@@ -11,6 +13,7 @@ function start() {
     knap.addEventListener("click", filtrerLamper)
   );
   hentData();
+  kontakten.addEventListener("click", visLamper);
 }
 
 function filtrerLamper() {
@@ -31,10 +34,10 @@ async function hentData() {
   const respons = await fetch(url, options);
   lamper = await respons.json();
   console.log(lamper);
-  visLamper();
 }
 
 function visLamper() {
+  startskaerm.style.display = "none";
   let container = document.querySelector("#template_section");
   let lampeTemplate = document.querySelector("template").content;
   container.textContent = "";
