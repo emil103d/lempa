@@ -30,6 +30,12 @@ function visLampen(lamper) {
   container.querySelector("h2").textContent = lamper.Model;
   container.querySelector(".pris").textContent = lamper.Pris + ",-";
   container.querySelector("img").src = "billeder/" + lamper.billede + ".svg";
+  if (lamper.Kategori == "Gulvlampe") {
+    container.querySelector("div").classList.add("vægLampe");
+  } else if (lamper.Kategori == "Væglampe") {
+    container.querySelector("div").classList.add("vægLampe");
+  }
+
   container.querySelector("p").innerHTML =
     "<strong>Beskrivelse:</strong> " + lamper.Langbeskrivelse;
   container.querySelector(".anden").innerHTML =
