@@ -34,15 +34,18 @@ function visLampen(lamper) {
     "<strong>Beskrivelse:</strong> " + lamper.Langbeskrivelse;
   container.querySelector(".anden").innerHTML =
     "<strong>Materiale:</strong> " + lamper.Materiale;
+  container
+    .querySelector("button")
+    .addEventListener("click", tilbageTilForsiden);
 }
 //   document.querySelector("h3").textContent = menu.navn;
 //   document.querySelector(".oprindelse").textContent =
 //     "Oprindelse: " + menu.oprindelsesregion;
 //   document.querySelector(".beskrivelse").textContent = menu.langbeskrivelse;
 //   document.querySelector(".pris").textContent = "Pris: " + menu.pris + ",-";
-//   document.querySelector("button").addEventListener("click", tilbageTilMenuen);
+
 // }
 
-// function tilbageTilMenuen() {
-//   history.back();
-// }
+function tilbageTilForsiden() {
+  history.back();
+}
