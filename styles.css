@@ -291,11 +291,23 @@ figure {
   height: 100%;
 }
 
-#template_section {
+.main {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 1fr 0.5fr;
-  z-index: 1;
+  grid-template-rows: repeat(3, 1fr);
 }
+
+/* .bund {
+  grid-row: 3;
+}
+
+.top {
+  grid-row: 1;
+}
+
+.midte {
+  grid-row: 2;
+} */
 
 /***** about media querys ******/
 
