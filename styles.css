@@ -54,7 +54,7 @@ header {
   grid-template-columns: 1fr 1fr;
   justify-content: right;
   align-items: center;
-  min-height: 10vh;
+  height: 6rem;
   position: relative;
   z-index: 5;
   border-bottom: 0.5px solid black;
@@ -293,10 +293,14 @@ figure {
 
 #template_section {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: 1fr 0.5fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  grid-auto-flow: dense;
 }
 
+#template_section figure:nth-child(3n) {
+  grid-column: span 2;
+}
 .bund {
   grid-row: 3;
 }
