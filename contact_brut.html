@@ -16,7 +16,7 @@
 
       .first_section {
         grid-column: 2/3;
-        max-width: 420px;
+        max-width: 400px;
         display: grid;
       }
 
@@ -84,27 +84,6 @@
         color: black;
       }
 
-      #produkt {
-        grid-column: 1;
-        grid-row: 2;
-        border-radius: 0px;
-        background-color: white;
-        border: 1px solid black;
-        height: 30px;
-      }
-      #color {
-        grid-column: 2;
-        grid-row: 2;
-        border-radius: 0px;
-        background-color: white;
-        border: 1px solid black;
-        height: 30px;
-      }
-
-      label {
-        height: 30px;
-      }
-
       @media (min-width: 700px) {
         .index {
           display: block;
@@ -156,6 +135,23 @@
           grid-template-columns: 1fr 0.5fr;
           grid-template-rows: 1fr 1fr;
           gap: 10px;
+        }
+
+        #produkt {
+          grid-column: 1;
+          grid-row: 2;
+          border-radius: 0px;
+          background-color: white;
+          border: 1px solid black;
+          height: 30px;
+        }
+        #color {
+          grid-column: 2;
+          grid-row: 2;
+          border-radius: 0px;
+          background-color: white;
+          border: 1px solid black;
+          height: 30px;
         }
 
         label {
