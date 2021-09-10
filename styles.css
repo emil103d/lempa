@@ -291,13 +291,13 @@ figure {
   height: 100%;
 }
 
-.main {
+#template_section {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 1fr 0.5fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
 }
 
-/* .bund {
+.bund {
   grid-row: 3;
 }
 
@@ -307,7 +307,7 @@ figure {
 
 .midte {
   grid-row: 2;
-} */
+}
 
 .lampePortefolio img {
   cursor: pointer;

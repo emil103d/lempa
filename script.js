@@ -42,6 +42,14 @@ function visLamper() {
     console.log("Kategori", lampe.Kategori);
     if (filter == lampe.Kategori || filter == "alle") {
       const klon = lampeTemplate.cloneNode(true);
+      if (lampe.Kategori == "Gulvlampe") {
+        klon.querySelector("figure").classList.add("bund");
+      } else if (lampe.Kategori == "Pendel") {
+        klon.querySelector("figure").classList.add("top");
+      } else if (lampe.Kategori == "Væglampe") {
+        klon.querySelector("figure").classList.add("midte");
+      }
+
       klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg";
       klon
         .querySelector(".lampePortefolio")
@@ -50,14 +58,6 @@ function visLamper() {
     }
   });
 }
-
-// if ((lampe.Kategori = Gulvlampe)) {
-//   this.add.classList(".bund");
-// } else if ((lampe.Kategori = Pendel)) {
-//   this.add.classList(".top");
-// } else if ((lampe.Kategori = Væglampe)) {
-//   this.add.classList(".midte");
-// }
 
 function visLampe(lampe) {
   location.href = `product.html?id=${lampe._id}`;
