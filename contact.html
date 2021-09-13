@@ -60,7 +60,8 @@
         display: none;
       }
 
-      .kontaktknap {
+      .kontaktknap,
+      .takknap {
         width: 6rem;
         height: 2rem;
         border-radius: 0px;
@@ -71,7 +72,8 @@
         /* text-align: center; */
       }
 
-      .kontaktknap:hover {
+      .kontaktknap:hover,
+      .takknap:hover {
         background-color: black;
         color: white;
       }
@@ -265,7 +267,7 @@
             Din henvendelse er ved at blive behandlet og vi kontakter dig på det
             angivne telefon nummer, hurtigst muligt.
           </p>
-          <button class="kontaktknap">Luk</button>
+          <button class="takknap">Luk</button>
           <img src="billeder/pexels-dziana-hasanbekava-7626575.jpg" alt="" />
         </div>
       </div>
@@ -280,6 +282,15 @@
 
   <script>
     let knap = document.querySelector(".kontaktknap");
-    let pop = document.querySelector(".popup");
+    let takknap = document.querySelector(".takknap");
+    let pop = document.querySelector(".popup_container");
+
+    knap.addEventListener("click", tak);
+    console.log("tak");
+
+    function tak() {
+      pop.style.display = "block";
+      takknap.addEventListener("click", () => (pop.style.display = "none"));
+    }
   </script>
 </html>
