@@ -69,7 +69,7 @@
         border: 1px solid black;
         margin-top: 20px;
         align-self: center;
-        /* text-align: center; */
+        cursor: pointer;
       }
 
       .kontaktknap:hover,
@@ -106,16 +106,17 @@
 
       .popup_container {
           width: 100vw;
-          height: 200%;
-          top: 90px;
+          height: 100vh;
+          top: 0;
+          left: 0;
           background-color: rgba(0, 0, 0, 0.747);
-          position: absolute;
+          position: fixed;
           display: none;
+          z-index: 30;
         }
 
         .popup_sprite {
           width: 80vw;
-          height: auto;
           background-color: rgb(255, 255, 255);
           color: rgb(0, 0, 0);
           border: 1px solid black;
@@ -123,8 +124,7 @@
           text-align: center;
           line-height: 2rem;
           padding: 20px;
-          margin-top: 100px;
-
+          margin-top: 20px;
         }
 
       /* ---------------- MOBILE ABOWE - WEB BELOW ----------------- */
@@ -182,8 +182,9 @@
         }
 
         .popup_sprite {
-          width: 500px;
+          width: 400px;
           padding: 40px;
+
         }
 
       }
@@ -260,18 +261,18 @@
           </form>
         </div>
       </section>
-      <div class="popup_container">
-        <div class="popup_sprite">
-          <h4>Tak for din henvendelse hos Lempa.</h4>
-          <p>
-            Din henvendelse er ved at blive behandlet og vi kontakter dig på det
-            angivne telefon nummer, hurtigst muligt.
-          </p>
-          <button class="takknap">Luk</button>
-          <img src="billeder/pexels-dziana-hasanbekava-7626575.jpg" alt="" />
-        </div>
-      </div>
     </main>
+    <div class="popup_container">
+      <div class="popup_sprite">
+        <h4>Tak for din henvendelse hos Lempa.</h4>
+        <p>
+          Din henvendelse er ved at blive behandlet og vi kontakter dig på det
+          angivne telefon nummer, hurtigst muligt.
+        </p>
+        <button class="takknap">Luk</button>
+        <img src="billeder/pexels-dziana-hasanbekava-7626575.jpg" alt="" />
+      </div>
+    </div>
     <footer>
       <p>Amager Boulevard 2</p>
       <a href="mailto:doris@gmail.com"><p>doris@lempa.com</p></a>
