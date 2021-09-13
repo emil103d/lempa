@@ -309,7 +309,7 @@ button {
 }
 
 figure {
-  width: 40%;
+  /* width: 40%; */
   height: 100%;
   align-items: baseline;
 }
@@ -318,15 +318,27 @@ figure {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr 2fr;
   grid-auto-flow: dense;
   z-index: 5;
 }
 
-#template_section figure:nth-child(3n) {
-  grid-column: span 2;
+#template_section figure:nth-child(1n) {
+  width: 100px;
 }
+
+#template_section figure:nth-child(2n) {
+  width: 130px;
+}
+
+#template_section figure:nth-child(3n + 1) {
+  width: 200px;
+}
+
+/* #template_section figure:nth-child(3n) {
+  grid-column: span 2;
+} */
 
 /* #template_section figure:nth-child(12n) {
   grid-column: span 1;
