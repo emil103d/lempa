@@ -319,7 +319,7 @@ figure {
   grid-row: 1 / 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 2fr;
   grid-auto-flow: dense;
   z-index: 5;
 }
@@ -353,7 +353,6 @@ figure {
   animation-name: zoom_kf;
   animation-duration: 1s;
   animation-fill-mode: both;
-  justify-content: end;
 }
 
 #forside {
@@ -364,7 +363,7 @@ figure {
 
 @keyframes zoom_kf {
   0% {
-    transform: scale(50%);
+    transform: scale(70%);
   }
   100% {
     transform: scale(130%);
@@ -372,7 +371,6 @@ figure {
 }
 
 .zoomOut {
-  margin-top: -50px;
   animation-name: zoom_out_kf;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -380,7 +378,7 @@ figure {
 
 @keyframes zoom_out_kf {
   0% {
-    transform: scale(100%);
+    transform: scale(110%);
   }
   100% {
     transform: scale(60%);
