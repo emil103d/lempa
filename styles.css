@@ -371,7 +371,7 @@ figure {
 }
 
 .zoomOut {
-  margin-top: -100px;
+  margin-top: -50px;
   animation-name: zoom_out_kf;
   animation-duration: 1s;
   animation-fill-mode: both;
