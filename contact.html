@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://use.typekit.net/yow4bha.css" />
     <link rel="shortcut icon" href="billeder/favicon.svg" type="image/x-icon" />
     <style>
-      main {
+      main .index {
         max-width: 1000px;
         margin: 0 auto;
+        display: grid;
+        grid-column: 1fr auto 1fr;
       }
 
       .first_section {
@@ -26,13 +28,8 @@
         margin: 1em 0;
       }
 
-      h4 {
+      .index h4 {
         margin: 0.7em 0;
-      }
-
-      .index {
-        display: grid;
-        grid-column: 1fr auto 1fr;
       }
 
       .contact {
@@ -93,7 +90,7 @@
         height: 30px;
       }
       #color {
-        grid-column: 2;
+        grid-column: 2;s
         grid-row: 2;
         border-radius: 0px;
         background-color: white;
@@ -105,6 +102,30 @@
         height: 30px;
       }
 
+      .popup_container {
+          width: 100vw;
+          height: 200%;
+          top: 90px;
+          background-color: rgba(0, 0, 0, 0.747);
+          position: absolute;
+          display: none;
+        }
+
+        .popup_sprite {
+          width: 80vw;
+          height: auto;
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
+          border: 1px solid black;
+          margin: auto;
+          text-align: center;
+          line-height: 2rem;
+          padding: 20px;
+          margin-top: 100px;
+
+        }
+
+      /* ---------------- MOBILE ABOWE - WEB BELOW ----------------- */
       @media (min-width: 700px) {
         .index {
           display: block;
@@ -158,9 +179,11 @@
           gap: 10px;
         }
 
-        label {
-          height: 30px;
+        .popup_sprite {
+          width: 500px;
+          padding: 40px;
         }
+
       }
     </style>
   </head>
@@ -223,9 +246,10 @@
                 <option value="Stand out">Gul</option>
               </select>
             </div>
+
             <label for="email"><h4>Din email:</h4></label>
             <input type="text" />
-            <br />
+
             <h4>Din henvendelse:</h4>
             <textarea name="contact" id="" cols="30" rows="10"></textarea>
             <div>
@@ -234,6 +258,17 @@
           </form>
         </div>
       </section>
+      <div class="popup_container">
+        <div class="popup_sprite">
+          <h4>Tak for din henvendelse hos Lempa.</h4>
+          <p>
+            Din henvendelse er ved at blive behandlet og vi kontakter dig på det
+            angivne telefon nummer, hurtigst muligt.
+          </p>
+          <button class="kontaktknap">Luk</button>
+          <img src="billeder/pexels-dziana-hasanbekava-7626575.jpg" alt="" />
+        </div>
+      </div>
     </main>
     <footer>
       <p>Amager Boulevard 2</p>
@@ -242,4 +277,9 @@
     </footer>
     <script src="burgerMenu.js"></script>
   </body>
+
+  <script>
+    let knap = document.querySelector(".kontaktknap");
+    let pop = document.querySelector(".popup");
+  </script>
 </html>
