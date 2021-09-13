@@ -39,6 +39,16 @@ async function hentData() {
   console.log(lamper);
 }
 
+// var something = (function() {
+//     var executed = false;
+//     return function() {
+//         if (!executed) {
+//             executed = true;
+//             // do something
+//         }
+//     };
+// })();
+
 // Function vislamper:
 function visLamper() {
   hovede.style.display = "grid";
