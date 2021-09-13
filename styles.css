@@ -275,10 +275,10 @@ button {
   text-align: center;
   margin: 20px;
   z-index: 10;
-  display: grid;
-  place-content: center;
   grid-column: 1;
   grid-row: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .valgt {
@@ -292,8 +292,6 @@ figure {
 }
 
 #template_section {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
@@ -331,7 +329,7 @@ figure {
 
 .top {
   grid-row: 1;
-  margin-top: -64px;
+  margin-top: -67px;
 }
 
 .midte {
@@ -410,6 +408,11 @@ figure {
     align-self: center;
   }
 
+  #template_section {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
   #template_section figure:nth-child(3n + 1) {
     width: 200px;
   }
@@ -424,6 +427,10 @@ figure {
 
   #template_section figure:nth-child(9) {
     margin-bottom: -218px;
+  }
+
+  .top {
+    margin-top: -64px;
   }
 }
 
