@@ -1,7 +1,5 @@
-const menuKnap = document.querySelector(".menuknap");
 const kontakten = document.querySelector("#stik");
 const startskaerm = document.querySelector("#start");
-let menuOpen = false;
 let lamper;
 let filter = "alle";
 
@@ -70,15 +68,3 @@ function visLampe(lampe) {
   location.href = `product.html?id=${lampe._id}`;
   console.log(visLampe);
 }
-
-menuKnap.addEventListener("click", () => {
-  if (!menuOpen) {
-    menuKnap.classList.add("open");
-    menuOpen = true;
-    document.querySelector("#menu").classList.remove("hidden");
-  } else {
-    menuKnap.classList.remove("open");
-    menuOpen = false;
-    document.querySelector("#menu").classList.add("hidden");
-  }
-});

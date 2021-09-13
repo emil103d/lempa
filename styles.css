@@ -318,8 +318,8 @@ figure {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr 2fr;
   grid-auto-flow: dense;
   z-index: 5;
 }
@@ -328,9 +328,9 @@ figure {
   grid-column: span 2;
 }
 
-#template_section figure:nth-child(12n) {
+/* #template_section figure:nth-child(12n) {
   grid-column: span 1;
-}
+} */
 
 .bund {
   grid-row: 3;
@@ -353,6 +353,7 @@ figure {
   animation-name: zoom_kf;
   animation-duration: 1s;
   animation-fill-mode: both;
+  justify-content: end;
 }
 
 #forside {
