@@ -8,10 +8,14 @@ const myHeaders = {
 };
 
 let lamper;
-let filter = "Gul";
+let filter = "";
+
+// sørg for at DOM'en er loaded
 
 console.log("ID", id);
 document.addEventListener("DOMContentLoaded", start);
+
+// Lav en eventlistener på farve knapper
 
 function start() {
   const filterKnapper = document.querySelectorAll(".farve button");
@@ -19,11 +23,15 @@ function start() {
   loadJSON();
 }
 
+// Få lampen til at skifte farve, ved tryk på respektive knap og marker knap.
+
 function filtrerFarve() {
   filter = this.dataset.Farve;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
 }
+
+// Indlæs id'ets data fra Restdb.io og gå videre til at vise lampen
 
 async function loadJSON() {
   const JSONData = await fetch(
@@ -36,6 +44,8 @@ async function loadJSON() {
   console.log("Lamper", lamper);
   visLampen(lamper);
 }
+
+// vis lampen og udskriv beskrivelser for den. Til slut en eventlistener på en "tilbage" knap
 
 function visLampen(lamper) {
   let container = document.querySelector(".product");
@@ -57,13 +67,8 @@ function visLampen(lamper) {
     .querySelector("article button")
     .addEventListener("click", tilbageTilForsiden);
 }
-//   document.querySelector("h3").textContent = menu.navn;
-//   document.querySelector(".oprindelse").textContent =
-//     "Oprindelse: " + menu.oprindelsesregion;
-//   document.querySelector(".beskrivelse").textContent = menu.langbeskrivelse;
-//   document.querySelector(".pris").textContent = "Pris: " + menu.pris + ",-";
 
-// }
+// Gå tilbage hvor du kom fra
 
 function tilbageTilForsiden() {
   history.back();
