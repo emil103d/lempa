@@ -5,6 +5,7 @@ let filter = "alle";
 
 document.addEventListener("DOMContentLoaded", start);
 
+//Funktion start: Når man trykker på kontakten, kommer lamperne frem og den sorte baggrund forsvinder. Der bliver også tilføjet eventlisteners så filtringsknapperne virker
 function start() {
   let filterKnapper = document.querySelectorAll(".navKategori button");
   filterKnapper.forEach((knap) =>
@@ -28,14 +29,16 @@ const options = {
   },
 };
 
+// async funktion: Her bliver daten på alle lamper hentet ned
 async function hentData() {
   const respons = await fetch(url, options);
   lamper = await respons.json();
   console.log(lamper);
 }
 
+// Function vislamper:
 function visLamper() {
-  startskaerm.style.display = "none";
+  startskaerm.style.display = "none"; //man kan ikke se lamperne før man har trykker på stikkontakten
   let container = document.querySelector("#template_section");
   let lampeTemplate = document.querySelector("template").content;
   container.textContent = "";
@@ -43,26 +46,32 @@ function visLamper() {
     const klon = lampeTemplate.cloneNode(true);
     console.log("Kategori", lampe.Kategori);
     if (filter == lampe.Kategori) {
+      // Når man f.eks. trykker på væglamper bliver alle væglamper større og alle andre kategorier bliver mindre.
       klon.querySelector("figure").classList.add("zoomIn");
     } else if (filter != lampe.Kategori) {
       klon.querySelector("figure").classList.add("zoomOut");
     }
 
     if (lampe.Kategori == "Gulvlampe") {
+      // Hvis kategorien er gulvlampe skal billerdne lægge sig i bunden
       klon.querySelector("figure").classList.add("bund");
     } else if (lampe.Kategori == "Pendel") {
+      // Hvis kategorien er Pendel skal billerdne lægge sig i toppen
       klon.querySelector("figure").classList.add("top");
     } else if (lampe.Kategori == "Væglampe") {
+      // Hvis kategorien er Væglampe skal billerdne lægge sig i midten
       klon.querySelector("figure").classList.add("midte");
     }
 
-    klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg";
+    klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg"; //Her klones lampe billerne så de vises på skærmen
     klon
       .querySelector(".lampePortefolio")
-      .addEventListener("click", () => visLampe(lampe));
-    container.appendChild(klon);
+      .addEventListener("click", () => visLampe(lampe)); // Her kommer man til singleview
+    container.appendChild(klon); // Viser billederne
   });
 }
+
+// Her Vises
 
 function visLampe(lampe) {
   location.href = `product.html?id=${lampe._id}`;
