@@ -236,30 +236,6 @@ p {
   margin-bottom: 10px;
 }
 
-@media (min-width: 800px) {
-  .menuknap {
-    display: none;
-  }
-
-  .ingen_menu {
-    display: initial;
-    list-style-type: none;
-    display: flex;
-  }
-
-  nav {
-    grid-column: 3;
-  }
-
-  header img {
-    width: 120px;
-  }
-
-  footer p {
-    font-size: 1rem;
-  }
-}
-
 /***** Forside ******/
 
 #start {
@@ -309,28 +285,51 @@ button {
 }
 
 figure {
-  width: 40%;
   height: 100%;
   align-items: baseline;
+  margin: auto;
 }
 
 #template_section {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
   z-index: 5;
 }
 
-#template_section figure:nth-child(3n) {
+/* #template_section figure:nth-child(3n) {
   grid-column: span 2;
-}
+} */
 
 /* #template_section figure:nth-child(12n) {
   grid-column: span 1;
 } */
+
+#template_section figure:nth-child(1n) {
+  width: 100px;
+}
+
+#template_section figure:nth-child(2n) {
+  width: 130px;
+}
+
+#template_section figure:nth-child(3n + 1) {
+  width: 200px;
+}
+
+#template_section figure:nth-child(6) {
+  margin-bottom: -164px;
+}
+
+#template_section figure:nth-child(7) {
+  margin-bottom: -59px;
+}
+
+#template_section figure:nth-child(9) {
+  margin-bottom: -218px;
+}
 
 .bund {
   grid-row: 3;
@@ -339,6 +338,7 @@ figure {
 
 .top {
   grid-row: 1;
+  margin-top: -64px;
 }
 
 .midte {
@@ -382,6 +382,36 @@ figure {
   }
   100% {
     transform: scale(60%);
+  }
+}
+
+/**** mobile above & web below ****/
+
+@media (min-width: 800px) {
+  .menuknap {
+    display: none;
+  }
+
+  .ingen_menu {
+    display: initial;
+    list-style-type: none;
+    display: flex;
+  }
+
+  nav {
+    grid-column: 3;
+  }
+
+  header img {
+    width: 120px;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  .navKategori {
+    display: flex;
   }
 }
 
