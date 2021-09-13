@@ -274,10 +274,11 @@ button {
 .navKategori {
   text-align: center;
   margin: 20px;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  align-self: center;
   z-index: 10;
+  display: grid;
+  place-content: center;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .valgt {
@@ -320,19 +321,7 @@ figure {
 }
 
 #template_section figure:nth-child(3n + 1) {
-  width: 200px;
-}
-
-#template_section figure:nth-child(6) {
-  margin-bottom: -164px;
-}
-
-#template_section figure:nth-child(7) {
-  margin-bottom: -59px;
-}
-
-#template_section figure:nth-child(9) {
-  margin-bottom: -218px;
+  width: 100px;
 }
 
 .bund {
@@ -415,7 +404,26 @@ figure {
   }
 
   .navKategori {
-    display: flex;
+    display: block;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+  }
+
+  #template_section figure:nth-child(3n + 1) {
+    width: 200px;
+  }
+
+  #template_section figure:nth-child(6) {
+    margin-bottom: -164px;
+  }
+
+  #template_section figure:nth-child(7) {
+    margin-bottom: -59px;
+  }
+
+  #template_section figure:nth-child(9) {
+    margin-bottom: -218px;
   }
 }
 
