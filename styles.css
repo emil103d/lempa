@@ -273,11 +273,11 @@ p {
 #stik {
   background-image: url(billeder/stikkontakt.svg);
   position: absolute;
-  width: 12vw;
-  height: 19vw;
+  width: 14vw;
+  height: 22vw;
   background-size: 100%;
   left: 44vw;
-  top: 34vw;
+  top: 18vw;
   cursor: pointer;
 }
 
