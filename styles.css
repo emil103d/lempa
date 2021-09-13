@@ -303,6 +303,10 @@ figure {
   grid-column: span 2;
 } */
 
+/* #template_section figure:nth-child(3n) {
+  grid-column: span 2;
+} */
+
 /* #template_section figure:nth-child(12n) {
   grid-column: span 1;
 } */

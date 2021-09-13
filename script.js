@@ -15,6 +15,7 @@ function start() {
   kontakten.addEventListener("click", visLamper);
 }
 
+// function filtrerLamper: Filtere lamperne ved tryk på respektive knap og markere den valgte knap.
 function filtrerLamper() {
   filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
@@ -71,8 +72,7 @@ function visLamper() {
   });
 }
 
-// Her Vises
-
+// Function visLampe: Når man trykker på en lampe bliver man sendt over til product.html og til den specifikke lampe id
 function visLampe(lampe) {
   location.href = `product.html?id=${lampe._id}`;
   console.log(visLampe);
