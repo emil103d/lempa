@@ -15,7 +15,7 @@ function start() {
   kontakten.addEventListener("click", visLamper);
 }
 
-// function filtrerLamper: fjerne den valgte knap og tilføjer
+// function filtrerLamper: Filtere lamperne ved tryk på respektive knap og markere den valgte knap.
 function filtrerLamper() {
   filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
