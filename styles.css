@@ -253,7 +253,7 @@ p {
   height: 37vw;
   background-size: 100%;
   left: 38vw;
-  top: 18vw;
+  top: 45vw;
   cursor: pointer;
 }
 
@@ -478,7 +478,7 @@ figure {
   #stik {
     width: 10vw;
     height: 15.47vw;
-    left: 44vw;
-    top: 12vw;
+    left: 45vw;
+    top: 22vw;
   }
 }
