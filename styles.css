@@ -326,7 +326,6 @@ figure {
 
 .bund {
   grid-row: 3;
-  justify-content: end;
 }
 
 .top {
@@ -378,6 +377,10 @@ figure {
     transform: scale(60%);
     opacity: 30%;
   }
+}
+
+.gulvlampePlacering {
+  align-self: end;
 }
 
 /* -----------------contact side---------------------- */

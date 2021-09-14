@@ -47,17 +47,19 @@ function visLamper() {
       klon.querySelector("figure").classList.add("zoomIn");
     } else if (filter != lampe.Kategori) {
       klon.querySelector("figure").classList.add("zoomOut");
-    }
+    } 
 
     if (lampe.Kategori == "Gulvlampe") {
       // Hvis kategorien er gulvlampe skal billerdne lægge sig i bunden
       klon.querySelector("figure").classList.add("bund");
+      klon.querySelector("figure").
     } else if (lampe.Kategori == "Pendel") {
       // Hvis kategorien er Pendel skal billerdne lægge sig i toppen
       klon.querySelector("figure").classList.add("top");
     } else if (lampe.Kategori == "Væglampe") {
       // Hvis kategorien er Væglampe skal billerdne lægge sig i midten
       klon.querySelector("figure").classList.add("midte");
+      //animation end class align-self //objectfit 
     }
 
     klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg"; //Her klones lampe billerne så de vises på skærmen
