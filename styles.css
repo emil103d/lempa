@@ -200,8 +200,8 @@ footer a {
   height: 50%;
 }
 
-.yellow,
-.grey {
+.about .yellow,
+.about .grey {
   display: none;
 }
 
@@ -560,7 +560,7 @@ label {
   .product div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50vh 25vh 10vh;
+    grid-template-rows: 1fr 0.2fr 0.2fr;
   }
 
   .product div img,
@@ -717,12 +717,12 @@ label {
     margin: 30px;
   }
 
-  .yellow {
+  .about .yellow {
     display: grid;
     grid-column: 2;
   }
 
-  .grey {
+  .about .grey {
     display: grid;
   }
 
