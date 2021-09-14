@@ -32,6 +32,7 @@ async function hentData() {
   const respons = await fetch(url, options);
   lamper = await respons.json();
   console.log(lamper);
+  visLamper();
 }
 
 // Function vislamper:
