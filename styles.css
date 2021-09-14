@@ -305,7 +305,7 @@ figure {
 #template_section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 28vh 10vh 42vh;
+  grid-template-rows: 200px 200px 300px;
   z-index: 5;
 }
 
@@ -700,17 +700,17 @@ label {
   }
 
   #template_section figure:nth-child(6) {
-    margin-bottom: -41px;
+    margin-bottom: -50px;
     margin-right: 40px;
   }
 
   #template_section figure:nth-child(7) {
-    margin-top: -46px;
+    margin-top: -38px;
     margin-right: 44px;
   }
 
   #template_section figure:nth-child(9) {
-    margin-bottom: -86px;
+    margin-bottom: -95px;
   }
 
   .top {
