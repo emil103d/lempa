@@ -47,9 +47,12 @@ function visLamper() {
       // Når man f.eks. trykker på væglamper bliver alle væglamper større og alle andre kategorier bliver mindre.
       klon.querySelector("figure").classList.add("zoomIn");
     } else if (filter != lampe.Kategori) {
+      klon.querySelector("figure").classList.remove("zoomIn");
       klon.querySelector("figure").classList.add("zoomOut");
+    } else if (lampe.kategori == alle) {
+      console.log(alle);
+      document.querySelector("figure").classList.remove("zoomOut");
     }
-
     if (lampe.Kategori == "Gulvlampe") {
       // Hvis kategorien er gulvlampe skal billerdne lægge sig i bunden
       klon.querySelector("figure").classList.add("bund");
