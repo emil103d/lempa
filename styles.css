@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+p {
+  max-width: 60ch;
+}
+
 img {
   display: block;
   width: 100%;
@@ -284,8 +288,8 @@ button {
   z-index: 10;
   grid-column: 1;
   grid-row: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .navKategori button {
@@ -307,18 +311,6 @@ figure {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 200px 200px 300px;
   z-index: 5;
-}
-
-#template_section figure:nth-child(1n) {
-  width: 100px;
-}
-
-#template_section figure:nth-child(2n) {
-  width: 130px;
-}
-
-#template_section figure:nth-child(3n + 1) {
-  width: 100px;
 }
 
 .bund {
@@ -355,7 +347,7 @@ figure {
     transform: scale(50%);
   }
   100% {
-    transform: scale(112%);
+    transform: scale(100%);
   }
 }
 
@@ -391,6 +383,21 @@ figure {
     opacity: 100%;
   }
 }
+
+/* .transition {
+  animation-name: transition_kf;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes transition_kf {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-150px);
+  }
+} */
 
 /* -----------------contact side---------------------- */
 
@@ -685,6 +692,17 @@ label {
   #template_section {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+  }
+  #template_section figure:nth-child(1n) {
+    width: 100px;
+  }
+
+  #template_section figure:nth-child(2n) {
+    width: 130px;
+  }
+
+  #template_section figure:nth-child(3n + 1) {
+    width: 100px;
   }
 
   #template_section figure:nth-child(3n + 1) {

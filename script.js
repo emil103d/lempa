@@ -56,6 +56,8 @@ function visLamper() {
     if (lampe.Kategori == "Gulvlampe") {
       // Hvis kategorien er gulvlampe skal billerdne lægge sig i bunden
       klon.querySelector("figure").classList.add("bund");
+      // klon.querySelector("figure").classList.remove("transition");
+      // klon.querySelector("figure").classList.add("transition");
     } else if (lampe.Kategori == "Pendel") {
       // Hvis kategorien er Pendel skal billerdne lægge sig i toppen
       klon.querySelector("figure").classList.add("top");
