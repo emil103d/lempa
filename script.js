@@ -1,6 +1,3 @@
-const kontakten = document.querySelector("#stik");
-const startskaerm = document.querySelector("#start");
-const hovede = document.querySelector("header");
 let lamper;
 let filter = "alle";
 
@@ -13,8 +10,6 @@ function start() {
     (knap) => knap.addEventListener("click", filtrerLamper) // Tilføjelse af eventlisteners så filtringsknapperne virker
   );
   hentData();
-  kontakten.addEventListener("click", visLamper); // Når man trykker på kontakten, kommer lamperne frem og den sorte baggrund forsvinder.
-  hovede.style.display = "none"; // header skal man ikke kunne se
 }
 
 // function filtrerLamper: Filtere lamperne ved tryk på respektive knap og markere den valgte knap.
@@ -41,8 +36,6 @@ async function hentData() {
 
 // Function vislamper:
 function visLamper() {
-  hovede.style.display = "grid";
-  startskaerm.style.display = "none"; //man kan ikke se lamperne før man har trykker på stikkontakten
   let container = document.querySelector("#template_section");
   let lampeTemplate = document.querySelector("template").content;
   container.textContent = "";
