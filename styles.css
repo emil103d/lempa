@@ -25,6 +25,12 @@ button:hover {
   background-color: black;
   color: white;
 }
+
+.tilbage {
+  position: absolute;
+  top: 105px;
+  left: 10px;
+}
 /* ------------Skrift----------------- */
 
 h2 {
@@ -242,7 +248,7 @@ article {
   margin-bottom: 15px;
 }
 
-p {
+article p {
   margin-bottom: 10px;
 }
 
@@ -424,6 +430,10 @@ main .index {
   margin: 0.7em 0;
 }
 
+form {
+  display: grid;
+}
+
 .contact {
   display: grid;
   border: 1px solid black;
@@ -459,9 +469,12 @@ main .index {
   border-radius: 0px;
   background-color: white;
   border: 1px solid black;
-  margin-top: 20px;
   align-self: center;
   cursor: pointer;
+}
+
+.kontaktknap {
+  margin-top: 20px;
 }
 
 a {

@@ -78,3 +78,13 @@ function visLampe(lampe) {
   location.href = `product.html?id=${lampe._id}`;
   console.log(visLampe);
 }
+
+// document
+//   .querySelector(".tilbage")
+//   .addEventListener("click", tilbageTilForsiden);
+
+// // Gå tilbage hvor du kom fra
+
+// function tilbageTilForsiden() {
+//   history.back();
+// }
