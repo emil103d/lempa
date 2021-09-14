@@ -706,6 +706,7 @@ label {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
+
   #template_section figure:nth-child(1n) {
     width: 100px;
   }
