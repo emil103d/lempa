@@ -6,15 +6,15 @@ let filter = "alle";
 
 document.addEventListener("DOMContentLoaded", start);
 
-//Funktion start: Når man trykker på kontakten, kommer lamperne frem og den sorte baggrund forsvinder. Der bliver også tilføjet eventlisteners så filtringsknapperne virker
+//Funktion start:
 function start() {
   let filterKnapper = document.querySelectorAll(".navKategori button");
-  filterKnapper.forEach((knap) =>
-    knap.addEventListener("click", filtrerLamper)
+  filterKnapper.forEach(
+    (knap) => knap.addEventListener("click", filtrerLamper) // Tilføjelse af eventlisteners så filtringsknapperne virker
   );
   hentData();
-  kontakten.addEventListener("click", visLamper);
-  hovede.style.display = "none";
+  kontakten.addEventListener("click", visLamper); // Når man trykker på kontakten, kommer lamperne frem og den sorte baggrund forsvinder.
+  hovede.style.display = "none"; // header skal man ikke kunne se
 }
 
 // function filtrerLamper: Filtere lamperne ved tryk på respektive knap og markere den valgte knap.
@@ -38,16 +38,6 @@ async function hentData() {
   lamper = await respons.json();
   console.log(lamper);
 }
-
-// var something = (function() {
-//     var executed = false;
-//     return function() {
-//         if (!executed) {
-//             executed = true;
-//             // do something
-//         }
-//     };
-// })();
 
 // Function vislamper:
 function visLamper() {
