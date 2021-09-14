@@ -300,7 +300,7 @@ figure {
 #template_section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 28vh 10vh 42vh;
   z-index: 5;
 }
 
@@ -669,16 +669,26 @@ label {
     width: 200px;
   }
 
+  #template_section figure:nth-child(1) {
+    margin-right: -25px;
+  }
+
+  #template_section figure:nth-child(3) {
+    margin-right: 15px;
+  }
+
   #template_section figure:nth-child(6) {
-    margin-bottom: -164px;
+    margin-bottom: -65px;
+    margin-right: 40px;
   }
 
   #template_section figure:nth-child(7) {
-    margin-bottom: -59px;
+    margin-top: -42px;
+    margin-right: 44px;
   }
 
   #template_section figure:nth-child(9) {
-    margin-bottom: -218px;
+    margin-bottom: -117px;
   }
 
   .top {
