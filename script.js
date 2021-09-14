@@ -43,15 +43,15 @@ function visLamper() {
   lamper.forEach((lampe) => {
     const klon = lampeTemplate.cloneNode(true);
     console.log("Kategori", lampe.Kategori);
-    if (filter == lampe.Kategori) {
+    if (filter == "alle") {
+      console.log(filter);
+      klon.querySelector("figure").classList.add("zoomIn");
+    } else if (filter == lampe.Kategori) {
       // Når man f.eks. trykker på væglamper bliver alle væglamper større og alle andre kategorier bliver mindre.
       klon.querySelector("figure").classList.add("zoomIn");
     } else if (filter != lampe.Kategori) {
       klon.querySelector("figure").classList.remove("zoomIn");
       klon.querySelector("figure").classList.add("zoomOut");
-    } else if (lampe.kategori == alle) {
-      console.log(alle);
-      document.querySelector("figure").classList.remove("zoomOut");
     }
     if (lampe.Kategori == "Gulvlampe") {
       // Hvis kategorien er gulvlampe skal billerdne lægge sig i bunden
