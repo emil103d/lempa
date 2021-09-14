@@ -206,6 +206,11 @@ footer a {
   height: 50%;
 }
 
+.about .yellow,
+.about .grey {
+  display: none;
+}
+
 article {
   border: 1px solid black;
   margin: 30px;
@@ -237,7 +242,7 @@ p {
   margin-bottom: 10px;
 }
 
-/***** Forside ******/
+/***** Landing Page ******/
 
 .landingpage {
   width: 100%;
@@ -534,7 +539,7 @@ label {
 #product_html .farve {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px;
+  grid-template-rows: 60px;
   margin: 20px;
 }
 
@@ -547,6 +552,7 @@ label {
   .product div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    max-height: 80vh;
   }
 
   .product div img,
@@ -716,6 +722,15 @@ label {
   .stander,
   .wall {
     display: none;
+  }
+
+  .about .yellow,
+  .about .grey {
+    display: grid;
+  }
+
+  .about .yellow {
+    grid-column: 2;
   }
 
   article div {
