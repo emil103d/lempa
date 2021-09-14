@@ -445,7 +445,8 @@ main .index {
 }
 
 .kontaktknap:hover,
-.takknap:hover {
+.takknap:hover,
+button:hover {
   background-color: black;
   color: white;
 }
@@ -559,6 +560,7 @@ label {
   .product div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50vh 25vh 10vh;
   }
 
   .product div img,
