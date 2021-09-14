@@ -372,9 +372,11 @@ figure {
 @keyframes zoom_out_kf {
   0% {
     transform: scale(110%);
+    opacity: 100%;
   }
   100% {
     transform: scale(60%);
+    opacity: 30%;
   }
 }
 
