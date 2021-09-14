@@ -347,10 +347,10 @@ figure {
 
 @keyframes zoom_kf {
   0% {
-    transform: scale(70%);
+    transform: scale(50%);
   }
   100% {
-    transform: scale(130%);
+    transform: scale(110%);
   }
 }
 
@@ -362,12 +362,28 @@ figure {
 
 @keyframes zoom_out_kf {
   0% {
-    transform: scale(110%);
+    transform: scale(100%);
     opacity: 100%;
   }
   100% {
-    transform: scale(60%);
+    transform: scale(50%);
     opacity: 30%;
+  }
+}
+
+.normal {
+  animation-name: normal_kf;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes normal_kf {
+  0% {
+    transform: scale(0%);
+  }
+  100% {
+    transform: scale(50%);
+    opacity: 100%;
   }
 }
 
@@ -678,17 +694,17 @@ label {
   }
 
   #template_section figure:nth-child(6) {
-    margin-bottom: -65px;
+    margin-bottom: -41px;
     margin-right: 40px;
   }
 
   #template_section figure:nth-child(7) {
-    margin-top: -42px;
+    margin-top: -46px;
     margin-right: 44px;
   }
 
   #template_section figure:nth-child(9) {
-    margin-bottom: -117px;
+    margin-bottom: -86px;
   }
 
   .top {

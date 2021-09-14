@@ -45,7 +45,7 @@ function visLamper() {
     console.log("Kategori", lampe.Kategori);
     if (filter == "alle") {
       console.log(filter);
-      klon.querySelector("figure").classList.add("zoomIn");
+      klon.querySelector("figure").classList.add("normal");
     } else if (filter == lampe.Kategori) {
       // Når man f.eks. trykker på væglamper bliver alle væglamper større og alle andre kategorier bliver mindre.
       klon.querySelector("figure").classList.add("zoomIn");
