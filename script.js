@@ -1,18 +1,15 @@
-const kontakten = document.querySelector("#stik");
-const startskaerm = document.querySelector("#start");
 let lamper;
 let filter = "alle";
 
 document.addEventListener("DOMContentLoaded", start);
 
-//Funktion start: Når man trykker på kontakten, kommer lamperne frem og den sorte baggrund forsvinder. Der bliver også tilføjet eventlisteners så filtringsknapperne virker
+//Funktion start:
 function start() {
   let filterKnapper = document.querySelectorAll(".navKategori button");
-  filterKnapper.forEach((knap) =>
-    knap.addEventListener("click", filtrerLamper)
+  filterKnapper.forEach(
+    (knap) => knap.addEventListener("click", filtrerLamper) // Tilføjelse af eventlisteners så filtringsknapperne virker
   );
   hentData();
-  kontakten.addEventListener("click", visLamper);
 }
 
 // function filtrerLamper: Filtere lamperne ved tryk på respektive knap og markere den valgte knap.
@@ -35,11 +32,11 @@ async function hentData() {
   const respons = await fetch(url, options);
   lamper = await respons.json();
   console.log(lamper);
+  visLamper();
 }
 
 // Function vislamper:
 function visLamper() {
-  startskaerm.style.display = "none"; //man kan ikke se lamperne før man har trykker på stikkontakten
   let container = document.querySelector("#template_section");
   let lampeTemplate = document.querySelector("template").content;
   container.textContent = "";
@@ -63,7 +60,6 @@ function visLamper() {
       // Hvis kategorien er Væglampe skal billerdne lægge sig i midten
       klon.querySelector("figure").classList.add("midte");
     }
-
     klon.querySelector("img").src = "billeder/" + lampe.billede + ".svg"; //Her klones lampe billerne så de vises på skærmen
     klon
       .querySelector(".lampePortefolio")
