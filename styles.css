@@ -789,11 +789,12 @@ label {
 
   .about {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.1fr 1.2fr 1fr 0.1fr;
   }
 
   article {
     margin: 30px;
+    grid-column: 2;
   }
 
   .stander,
