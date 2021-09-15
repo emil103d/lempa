@@ -156,6 +156,7 @@ header img {
   position: absolute;
   top: 100%;
   width: 100%;
+  background-color: white;
 }
 
 #menu li {
