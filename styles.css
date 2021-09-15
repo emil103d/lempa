@@ -402,7 +402,7 @@ figure {
   }
 }
 
-/* .transition {
+.transition {
   animation-name: transition_kf;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -415,7 +415,7 @@ figure {
   to {
     transform: translateY(-150px);
   }
-} */
+}
 
 /* -----------------contact side---------------------- */
 .underline {
@@ -773,17 +773,20 @@ label {
   }
 
   #template_section figure:nth-child(6) {
-    margin-bottom: -50px;
+    margin-bottom: -31px;
     margin-right: 40px;
+    width: 200px;
   }
 
   #template_section figure:nth-child(7) {
-    margin-top: -38px;
+    margin-bottom: -31px;
     margin-right: 44px;
+    width: 200px;
   }
 
   #template_section figure:nth-child(9) {
-    margin-bottom: -95px;
+    margin-bottom: -31px;
+    width: 200px;
   }
 
   .top {
