@@ -402,21 +402,6 @@ figure {
   }
 }
 
-.transition {
-  animation-name: transition_kf;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes transition_kf {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-150px);
-  }
-}
-
 /* -----------------contact side---------------------- */
 .underline {
   text-decoration: underline;
