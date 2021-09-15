@@ -18,7 +18,12 @@ function filtrerLamper() {
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   visLamper(); //kald funktionen visLamper efter det nye filter er sat
+  // document.querySelector(".floorknap").addEventListener("click", klikGulvLampe);
 }
+
+// function klikGulvLampe() {
+//   document.querySelector(".bund").classList.add(".transition");
+// }
 
 const url = "https://persongalleri-f565.restdb.io/rest/lempa";
 const options = {
