@@ -27,6 +27,7 @@ button:hover {
 }
 
 .tilbage {
+  display: none;
   position: absolute;
   top: 105px;
   left: 10px;
@@ -417,6 +418,9 @@ figure {
 } */
 
 /* -----------------contact side---------------------- */
+.underline {
+  text-decoration: underline;
+}
 
 main .index {
   max-width: 1000px;
@@ -616,6 +620,10 @@ label {
     grid-column: 2;
     margin-bottom: 20px;
   }
+
+  .tilbage {
+    display: block;
+  }
 }
 /* -----------------Product side slut---------------------- */
 
@@ -688,6 +696,10 @@ label {
     display: none;
   }
 
+  /* .floor_mobile {
+    display: none;
+  } */
+
   .ingen_menu {
     display: initial;
     list-style-type: none;
@@ -724,6 +736,16 @@ label {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 200px 200px 300px;
     z-index: 5;
+  }
+
+  #template_section figure img {
+    transition: ease 0.6s;
+  }
+
+  #template_section figure img:hover {
+    transform: scale(1.5);
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
   }
 
   #template_section figure:nth-child(1n) {
