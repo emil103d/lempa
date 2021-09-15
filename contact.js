@@ -9,3 +9,11 @@ function tak() {
   pop.style.display = "block";
   takknap.addEventListener("click", () => (pop.style.display = "none"));
 }
+
+document
+  .querySelector(".tilbage")
+  .addEventListener("click", tilbageTilForsiden);
+
+function tilbageTilForsiden() {
+  history.back();
+}
