@@ -190,6 +190,9 @@ footer {
   justify-content: space-between;
   border-top: 1px solid black;
   padding: 1rem;
+  background-color: white;
+  position: relative;
+  z-index: 10;
 }
 
 footer p {
@@ -308,6 +311,7 @@ button {
   text-align: center;
   margin: 20px;
   z-index: 10;
+  grid-row: 2;
 
   grid-template-columns: 0.5fr 3fr 0.5fr;
 }
@@ -357,7 +361,7 @@ figure {
 #forside {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 @keyframes zoom_kf {
@@ -694,6 +698,12 @@ label {
 @media (min-width: 800px) {
   .menuknap {
     display: none;
+  }
+
+  #forside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 
   /* .floor_mobile {
