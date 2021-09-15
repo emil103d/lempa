@@ -294,12 +294,26 @@ button {
   z-index: 10;
   grid-column: 1;
   grid-row: 1;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
 }
 
 .navKategori button {
   font-weight: bold;
+}
+
+.mobileKategori {
+  display: grid;
+  text-align: center;
+  margin: 20px;
+  z-index: 10;
+
+  grid-template-columns: 0.5fr 3fr 0.5fr;
+}
+
+.mobileKategori button {
+  font-weight: bold;
+  grid-column: 2;
 }
 
 .valgt {
@@ -313,10 +327,7 @@ figure {
 }
 
 #template_section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 200px 200px 300px;
-  z-index: 5;
+  display: none;
 }
 
 .bund {
@@ -702,9 +713,17 @@ label {
     align-self: center;
   }
 
+  .mobileKategori {
+    display: none;
+  }
+
   #template_section {
+    display: grid;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px 300px;
+    z-index: 5;
   }
 
   #template_section figure:nth-child(1n) {

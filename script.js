@@ -74,6 +74,15 @@ function visLamper() {
     klon
       .querySelector(".lampePortefolio")
       .addEventListener("click", () => visLampe(lampe)); // Her kommer man til singleview
+    document
+      .querySelector(".pendelProdukt")
+      .addEventListener("click", pendelProdukt);
+    document
+      .querySelector(".wallProdukt")
+      .addEventListener("click", wallProdukt);
+    document
+      .querySelector(".floorProdukt")
+      .addEventListener("click", floorProdukt);
     container.appendChild(klon); // Viser billederne
   });
 }
@@ -82,6 +91,18 @@ function visLamper() {
 function visLampe(lampe) {
   location.href = `product.html?id=${lampe._id}`;
   console.log(visLampe);
+}
+
+function pendelProdukt() {
+  location.href = `product.html?id=6137ac68d943be7d000a480b`;
+}
+
+function wallProdukt() {
+  location.href = `product.html?id=6137ad4ed943be7d000a4a04`;
+}
+
+function floorProdukt() {
+  location.href = `product.html?id=6137ad06d943be7d000a4822`;
 }
 
 // document
